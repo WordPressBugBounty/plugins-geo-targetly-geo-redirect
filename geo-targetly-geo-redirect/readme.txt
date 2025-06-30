@@ -3,8 +3,8 @@ Contributors: Geo Targetly
 Donate link: https://geotargetly.com
 Tags: geo content, geo redirect, redirect by location, redirect by country, redirect by city, redirect by ip, ip redirect, geo ip redirect, ip to location, geo targeted redirect, geo location redirect, redirect website, url redirect, location based redirect
 Requires at least: 3.0.1
-Tested up to: 6.3
-Stable tag: 6.3
+Tested up to: 6.8
+Stable tag: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
