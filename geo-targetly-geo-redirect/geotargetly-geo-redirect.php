@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Geo Redirect
 * Description: Redirect your website by geo location
-* Version: 7.1
+* Version: 7.1.1
 * Author: Geo Targetly
 * Author URI: https://geotargetly.com
 */
@@ -43,7 +43,7 @@ function geotargetly_wp_georedirect_settings_init(  ) {
 function geotargetly_wp_georedirect_ids_render(  ) {
 	$options = get_option( 'geotargetly_wp_georedirect_settings' );
 	?>
-	<input type='text' name='geotargetly_wp_georedirect_settings[geotargetly_wp_georedirect_ids]' value='<?php echo is_bool($options) ? '': $options['geotargetly_wp_georedirect_ids']; ?>'>
+	<input type='text' name='geotargetly_wp_georedirect_settings[geotargetly_wp_georedirect_ids]' value='<?php echo esc_attr(is_bool($options) ? '': $options['geotargetly_wp_georedirect_ids']); ?>'>
 	<?php
 }
 
@@ -126,17 +126,17 @@ EOT;
 
 	if (!empty($geotargetly_georedirect_ids_database_array)) {
         for ($i = 0; $i < count($geotargetly_georedirect_ids_database_array); ++$i) {
-
+            $georedirect_id = esc_js($geotargetly_georedirect_ids_database_array[$i]);
 			$scripts .= <<<EOT
 <script>
 (function(g,e,o,id,t,a,r,ge,tl,y,s){
-g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect$geotargetly_georedirect_ids_database_array[$i]style">body{opacity:0.0 !important;}</style>');
-s=function(){g.getElementById('georedirect$geotargetly_georedirect_ids_database_array[$i]style').innerHTML='body{opacity:1.0 !important;}';};
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect{$georedirect_id}style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect{$georedirect_id}style').innerHTML='body{opacity:1.0 !important;}';};
 t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
-y.src='https://g10102301085.co/gr?id=$geotargetly_georedirect_ids_database_array[$i]&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+y.src='https://g10102301085.co/gr?id=$georedirect_id&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
 t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
 georedirectLoaded="undefined" != typeof georedirectLoaded ? georedirectLoaded:{};
-georedirectLoaded['$geotargetly_georedirect_ids_database_array[$i]'] = function(redirect){var to=0;if(redirect){to=5000};setTimeout(function(){s();},to)};
+georedirectLoaded['$georedirect_id'] = function(redirect){var to=0;if(redirect){to=5000};setTimeout(function(){s();},to)};
 setTimeout(function(){s();}, 8000);
 })(document,'script','head');
 </script>
