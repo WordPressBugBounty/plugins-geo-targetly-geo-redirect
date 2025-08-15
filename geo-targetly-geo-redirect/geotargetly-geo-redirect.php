@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Geo Redirect
 * Description: Redirect your website by geo location
-* Version: 7.1.1
+* Version: 7.1.3
 * Author: Geo Targetly
 * Author URI: https://geotargetly.com
 */

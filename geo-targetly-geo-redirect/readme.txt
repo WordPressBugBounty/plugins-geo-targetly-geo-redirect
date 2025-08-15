@@ -4,7 +4,7 @@ Donate link: https://geotargetly.com
 Tags: geo content, geo redirect, redirect by location, redirect by country, redirect by city, redirect by ip, ip redirect, geo ip redirect, ip to location, geo targeted redirect, geo location redirect, redirect website, url redirect, location based redirect
 Requires at least: 3.0.1
 Tested up to: 6.8
-Stable tag: 7.1.1
+Stable tag: 7.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,7 +74,10 @@ e.g.
 3. Go to [Geo Targetly](https://geotargetly.com "Geo Targetly") to create and account and setup your redirects
 
 
+== Known issues ==
 
+Issue: Elementor sometimes hangs and fails to load the editor due to a conflict with another plugin (Geo Redirect).
+Workaround: Enable Safe Mode in Elementor (Elementor → Tools → Safe Mode) when editing. This bypasses the conflict until a permanent fix is implemented.
 
 == Changelog ==
 
