@@ -1,10 +1,10 @@
-=== Plugin Name ===
-Contributors: Geo Targetly
+=== Geo Redirect ===
+Contributors: geotargetly
 Donate link: https://geotargetly.com
-Tags: geo content, geo redirect, redirect by location, redirect by country, redirect by city, redirect by ip, ip redirect, geo ip redirect, ip to location, geo targeted redirect, geo location redirect, redirect website, url redirect, location based redirect
+Tags: geo content, geo redirect, redirect by location, redirect by country, redirect by city
 Requires at least: 3.0.1
 Tested up to: 6.8
-Stable tag: 7.1.3
+Stable tag: 8.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Redirect visitors based on geolocation (country, state, city, lat/lng/radius)
 
 Create geo targeted url redirects for your website pages. Perfect for creating both simple and complex redirects.
 
-This plugin can allow you to create simple redirects for your complete website or particular pages of your website. 
+This plugin can allow you to create simple redirects for your complete website or particular pages of your website.
 
 You can also use this plugin on multiple websites to inter-redirect between them which is especially useful if you own different country level domains.
 
@@ -56,22 +56,11 @@ This plugin is made by [Geo Targetly](https://geotargetly.com "Geo Targetly")
 
 **Detailed docs can be found below**
 
-* [Overview] (https://geotargetly.com/geo-redirect "Overview")
+* [Overview](https://geotargetly.com/geo-redirect "Overview")
 
-* [Quick Start Guide] (https://geotargetly.com/docs/geo-redirect#quick-start-guide "Quick Start Guide")
+* [Quick Start Guide](https://geotargetly.com/docs/geo-redirect#quick-start-guide "Quick Start Guide")
 
-* [Docs] (https://geotargetly.com/docs/geo-redirect "Docs")
-
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload 'geo-targetly-geo-redirect.php' to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to [Geo Targetly](https://geotargetly.com "Geo Targetly") to create and account and setup your redirects
+* [Docs](https://geotargetly.com/docs/geo-redirect "Docs")
 
 
 == Known issues ==
@@ -79,17 +68,20 @@ e.g.
 Issue: Elementor sometimes hangs and fails to load the editor due to a conflict with another plugin (Geo Redirect).
 Workaround: Enable Safe Mode in Elementor (Elementor → Tools → Safe Mode) when editing. This bypasses the conflict until a permanent fix is implemented.
 
-== Changelog ==
-
-= 5.0 =
-* Working release
-
-
-
 == Support ==
 
 * Live chat at [Geo Targetly](https://geotargetly.com "Geo Targetly")
 
+== External services ==
 
+This plugin connects to an external endpoint via the domain https://g10102301085.co to load and run a script that powers its core
+functionality, as outlined previously in the description.
 
+It sends the user's location each time the plugin is loaded. This is necessary to determine and customize the plugin’s
+behavior based on the user's geographical context.
 
+Additionally, this plugin connects to analytics endpoint https://g97676560.co/ to track plugin installation and usage over
+time.
+
+This service is provided by Geo Targetly – [Terms of Use](https://geotargetly.com/website-terms-of-use),
+[Privacy Policy](https://geotargetly.com/privacy-policy).
